@@ -1,0 +1,5 @@
+
+###
+# route test verify
+GET {{ baseURLv1 }}/test
+Content-Type: application/json
