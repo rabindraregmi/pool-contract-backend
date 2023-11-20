@@ -77,7 +77,7 @@ class PoolService  {
   public fetchUserDeposits = async (walletAddress: string) => {
     const {data} = await this.client.query<IDepositResponse>({
       query: gql`
-      query UserDeposits ($walletAddress: string) {
+      query UserDeposits ($walletAddress: String!) {
         deposits (where: {user: $walletAddress}){
           tokenAmount,
           user,
@@ -116,7 +116,7 @@ class PoolService  {
   public fetchUserTrend = async (walletAddress: string) => {
     const {data} = await this.client.query<ITrendResponse> ({
       query: gql`
-        query UserTrend ($walletAddress: string) {
+        query UserTrend ($walletAddress: String!) {
           deposits (where: {user: $walletAddress}) {
             tokenAmount,
             user,
