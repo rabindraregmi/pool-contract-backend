@@ -1,4 +1,4 @@
-# Simple Node.js App
+# Pool Contract Backend - API Service for Pool Contract
 
 This repository contains a simple Node.js app that serves the api with the blockchain data fetched from The Graph.
 ## Installation
